@@ -26,7 +26,7 @@ export const Form = () => {
 
     if (!tituloIsValid || !autorIsValid || tituloSpaces) {
       setError(true);
-      if (!tituloIsValid  && !autorIsValid) {
+      if (!tituloIsValid && !autorIsValid) {
         setErrorMsg("El titulo y el autor son incorrectos");
       } else if (!tituloIsValid || tituloSpaces) {
         if (tituloSpaces) {
@@ -35,7 +35,7 @@ export const Form = () => {
           setErrorMsg("El titulo tiene menos de 3 caracteres");
         }
       } else if (!autorIsValid) {
-        setErrorMsg("El autor es incorrecto");
+        setErrorMsg("El autor tiene menos de 6 caracteres");
       }
     } else {
       setError(false);
