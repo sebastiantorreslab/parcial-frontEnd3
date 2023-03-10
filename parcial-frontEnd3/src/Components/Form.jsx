@@ -26,6 +26,7 @@ export const Form = () => {
 
     if (!tituloIsValid || !autorIsValid || tituloSpaces) {
       setError(true);
+      setIsValid(false);
       if (!tituloIsValid && !autorIsValid) {
         setErrorMsg("El titulo y el autor son incorrectos");
       } else if (!tituloIsValid || tituloSpaces) {
@@ -88,6 +89,7 @@ export const Form = () => {
         <br />
         <button type="submit">Registrar información</button>
       </form>
+      <br />
       {error && <span style={{ color: "red" }}>{errorMsg}</span>}
       {isValid && <Card data={data} />}
     </div>
